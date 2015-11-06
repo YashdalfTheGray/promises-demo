@@ -1,0 +1,9 @@
+{
+  "firebase": "promises-demo",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
