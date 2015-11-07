@@ -33,11 +33,38 @@
 
     <!-- App JS -->
     <script src="app.js"></script>
+    <script src="navigation.js"></script>
 
 </head>
 <body ng-app="promisesDemo" layout="column">
 
-    <md-content flex ui-view class="scroll-container"></md-content>
+    <md-toolbar ng-controller="ToolbarCtrl as ctrl">
+        <div class="md-toolbar-tools">
+            <md-button hide-gt-md class="md-icon-button" aria-label="Menu" ng-click="ctrl.showNav()">
+                <i class="material-icons icon-button-adjust">menu</i>
+            </md-button>
+            <h2 ng-if="!ctrl.isHome()"><span><a ui-sref="home">Promises</a></span></h2>
+            <h2 ng-if="ctrl.isHome()"><span>Promises</span></h2>
+        </div>
+    </md-toolbar>
+
+    <div flex layout="row">
+        <md-sidenav md-is-locked-open="$mdMedia('gt-md')" class="md-whiteframe-z2" md-component-id="demo" layout="column">
+            <md-content ng-controller="SidebarCtrl as ctrl" flex>
+                <div layout="column" flex>
+                    <div flex>
+                        <md-list>
+                            <md-item ng-repeat="d in ctrl.demos">
+                                <h3 class="demo-list-item"><span ng-click="ctrl.goTo(d.state)">{{d.name}}</span></h3>
+                            </md-item>
+                        </md-list>
+                    </div>
+                </div>
+            </md-content>
+        </md-sidenav>
+
+        <md-content flex ui-view class="scroll-container"></md-content>
+    </div>
 
 </body>
 </html>
