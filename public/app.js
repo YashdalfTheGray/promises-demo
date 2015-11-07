@@ -15,7 +15,6 @@ angular.module('promisesDemo',
         function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
             "use strict";
 
-            /*
             $stateProvider
             .state('home', {
                 url: '/',
@@ -23,7 +22,6 @@ angular.module('promisesDemo',
                 controller: 'HomeCtrl as ctrl'
             });
             $urlRouterProvider.otherwise('/');
-            */
 
             $mdThemingProvider.theme('default')
                 .primaryPalette('blue-grey')
