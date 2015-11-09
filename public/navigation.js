@@ -35,12 +35,12 @@ angular.module('promisesDemo')
             };
 
             vm.demos = [
-                { name: 'Simple Promise', state: 'simple-promise' },
+                { name: 'Simple Promise Handling', state: 'simple-promise' },
                 { name: 'Promise Syntax', state: 'promise-syntax' },
                 { name: 'Then-Catch-Finally', state: 'then-catch-finally' },
                 { name: 'Chaining Promises' , state: 'chaining' },
                 { name: 'Wrapping other Async Operations', state: 'when' },
-                { name: 'Waiting for multiple resolutions', state: 'resolve-all' }
+                { name: 'Waiting for multiple resolutions', state: 'resolve-all' },
                 { name: 'Notify', state: 'notify' }
             ];
         }

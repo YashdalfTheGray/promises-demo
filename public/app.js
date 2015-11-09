@@ -20,6 +20,11 @@ angular.module('promisesDemo',
                 url: '/',
                 templateUrl: 'home/home.tpl.html',
                 controller: 'HomeCtrl as ctrl'
+            })
+            .state('simple-promise', {
+                url: '/simple',
+                templateUrl: 'simplePromise/simplePromise.tpl.html',
+                controller: 'SimplePromiseCtrl as ctrl'
             });
             $urlRouterProvider.otherwise('/');
 
