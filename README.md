@@ -1,2 +1,5 @@
 # promises-demo
-Encryption and security fireside chat - 11/12/2015
+Promises and Async execution fireside chat
+
+# Setup
+This app uses the `angular-gist` bower module which can be installed using `bower install --save angular-gist`. 
