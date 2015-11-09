@@ -16,6 +16,7 @@
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
     <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.11.0/angular-material.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
 
     <!-- App CSS -->
     <link rel="stylesheet" type="text/css" href="app.css">
@@ -30,12 +31,16 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <script src="//cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
     <script src="//cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
 
     <!-- App JS -->
     <script src="app.js"></script>
     <script src="navigation.js"></script>
     <script src="home/home.js"></script>
     <script src="simplePromise/simplePromise.js"></script>
+
+    <!-- Initialize code syntax highlighting -->
+    <script>hljs.initHighlightingOnLoad();</script>
 
 </head>
 <body ng-app="promisesDemo" layout="column">
