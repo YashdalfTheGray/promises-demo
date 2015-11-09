@@ -31,6 +31,11 @@ angular.module('promisesDemo',
                 url: '/promise-api',
                 templateUrl: 'promiseApiMethods/promiseApiMethods.tpl.html',
                 controller: 'PromiseApiMethodsCtrl as ctrl'
+            })
+            .state('chaining', {
+                url: '/chaining',
+                templateUrl: 'chaining/chaining.tpl.html',
+                controller: 'ChainingCtrl as ctrl'
             });
             $urlRouterProvider.otherwise('/');
 

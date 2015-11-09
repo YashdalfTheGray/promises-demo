@@ -1,0 +1,38 @@
+<md-content layout-padding layout-wrap>
+    <h2 flex>Chainging Promises</h2>
+
+    <md-content flex>
+        <md-input-container id="message1-input-container" flex>
+            <label>Message 1</label>
+            <input type="text" ng-model="ctrl.messages[0]" id="message1-input">
+        </md-input-container>
+        <md-input-container id="delay1-input-container" flex>
+            <label>Delay 1 (in seconds)</label>
+            <input type="number" ng-model="ctrl.delays[0]" id="delay1-input">
+        </md-input-container>
+        <md-input-container id="message2-input-container" flex>
+            <label>Message 2</label>
+            <input type="text" ng-model="ctrl.messages[1]" id="message2-input">
+        </md-input-container>
+        <md-input-container id="delay2-input-container" flex>
+            <label>Delay 2 (in seconds)</label>
+            <input type="number" ng-model="ctrl.delays[1]" id="delay2-input">
+        </md-input-container>
+        <p></p>
+        <md-button class="md-raised md-accent" ng-click="ctrl.setTimeout(ctrl.messages, ctrl.delays)" aria-label="Set Timeout" ng-disabled="ctrl.timeoutInProgress">
+            Set Timeout
+        </md-button>
+    </md-content>
+
+    <md-content flex>
+        <h3>Messages received</h3>
+        <p ng-show="ctrl.receivedMessages.length !== 0" ng-repeat="m in ctrl.receivedMessages track by $index">{{m}}</p>
+        <p ng-show="ctrl.receivedMessages.length === 0">No messages received yet.</p>
+    </md-content>
+
+    <md-content flex>
+        <p>Promises can be chained together by returning another promise from a <code>then()</code> block and handling the newly returned promise in the next <code>then()</code> block.</p>
+        <gist id="5a4230d2bc6736f995b1"></gist>
+    </md-content>
+
+</md-content>
