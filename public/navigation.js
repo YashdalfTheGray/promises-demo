@@ -36,7 +36,7 @@ angular.module('promisesDemo')
 
             vm.demos = [
                 { name: 'Simple Handling', state: 'simple-handling' },
-                { name: 'Then-Catch-Finally', state: 'then-catch-finally' },
+                { name: 'Then-Catch-Finally', state: 'promise-api' },
                 { name: 'Chaining Promises' , state: 'chaining' },
                 { name: 'Wrapping Other Async Operations', state: 'when' },
                 { name: 'Waiting For Multiple Resolutions', state: 'resolve-all' },

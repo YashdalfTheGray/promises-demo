@@ -1,0 +1,31 @@
+<md-content layout-padding layout-wrap>
+    <h2 flex>Then-Catch-Finally</h2>
+
+    <md-content flex>
+        <md-input-container id="message-input-container" flex>
+            <label>Message</label>
+            <input type="text" ng-model="ctrl.message" id="message-input">
+        </md-input-container>
+        <md-input-container id="delay-input-container" flex>
+            <label>Delay (in seconds)</label>
+            <input type="number" ng-model="ctrl.delay" id="delay-input">
+        </md-input-container>
+        <md-radio-group ng-model="ctrl.resolution" layout="row">
+            <md-radio-button value="fulfill">Fulfill</md-radio-button>
+            <md-radio-button value="reject">Reject</md-radio-button>
+        </md-radio-group>
+        <p></p>
+        <md-button class="md-raised md-accent" ng-click="ctrl.setTimeout(ctrl.resolution, ctrl.message, ctrl.delay)" aria-label="Set Timeout" ng-disabled="ctrl.timeoutInProgress">
+            Set Timeout
+        </md-button>
+    </md-content>
+
+    <md-content flex>
+        <h3>Code blocks run: <code>{{ctrl.codeBlocksRun}}</code></h3>
+    </md-content>
+
+    <md-content flex>
+        <p>The promises API exposes three methods, <code>then()</code>, <code>catch()</code> and <code>finally()</code>.</p>
+        <gist id="faa15c50520f17b4aa24"></gist>
+    </md-content>
+</md-content>

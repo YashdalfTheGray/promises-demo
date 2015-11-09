@@ -26,6 +26,11 @@ angular.module('promisesDemo',
                 url: '/simple',
                 templateUrl: 'simplePromise/simplePromise.tpl.html',
                 controller: 'SimplePromiseCtrl as ctrl'
+            })
+            .state('promise-api', {
+                url: '/promise-api',
+                templateUrl: 'promiseApiMethods/promiseApiMethods.tpl.html',
+                controller: 'PromiseApiMethodsCtrl as ctrl'
             });
             $urlRouterProvider.otherwise('/');
 
