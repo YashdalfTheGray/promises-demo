@@ -35,7 +35,6 @@ angular.module('promisesDemo')
                 timeoutPromiseWrapper(resolution, message, delay)
                 .then(function(result) {
                     vm.codeBlocksRun.push('then');
-                    vm.timeoutInProgress = false;
                     $mdToast.show(
                         $mdToast.simple()
                         .content(result)
@@ -44,7 +43,6 @@ angular.module('promisesDemo')
                     );
                 }).catch(function(result) {
                     vm.codeBlocksRun.push('catch');
-                    vm.timeoutInProgress = false;
                     $mdToast.show(
                         $mdToast.simple()
                         .content(result)
@@ -53,6 +51,7 @@ angular.module('promisesDemo')
                     );
                 }).finally(function() {
                     vm.codeBlocksRun.push('finally');
+                    vm.timeoutInProgress = false;
                 });
 
                 clearInputSvc(['message-input', 'delay-input']);
