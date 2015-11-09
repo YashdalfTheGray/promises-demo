@@ -6,7 +6,8 @@ angular.module('promisesDemo',
         'ui.router',
         'ngAnimate',
         'ngMaterial',
-        'firebase'
+        'firebase',
+        'gist'
     ]
 )
 .config(

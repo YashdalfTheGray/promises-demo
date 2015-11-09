@@ -1,3 +1,25 @@
 <md-content layout-padding layout-wrap>
     <h2 flex>Simple Promise Handling</h2>
+
+    <md-content flex>
+        <md-input-container id="message-input-container" flex>
+            <label>Message</label>
+            <input type="text" ng-model="ctrl.message" id="message-input">
+        </md-input-container>
+        <md-input-container id="delay-input-container" flex>
+            <label>Delay (in seconds)</label>
+            <input type="number" ng-model="ctrl.delay" id="delay-input">
+        </md-input-container>
+        <p></p>
+        <md-button class="md-raised md-accent" ng-click="ctrl.setTimeout(ctrl.message, ctrl.delay)" aria-label="Set Timeout" ng-disabled="ctrl.timeoutInProgress">
+            Set Timeout
+        </md-button>
+    </md-content>
+
+    <md-content flex>
+        <p>The message returned here is returned as part of a promise being fulfilled. The simplest way of handling promises is to use <code>promise.then()</code>.</p>
+
+        <gist id="c5fd551f57642015f0e6"></gist>
+
+    </md-content>
 </md-content>
