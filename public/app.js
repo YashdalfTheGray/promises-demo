@@ -22,7 +22,7 @@ angular.module('promisesDemo',
                 templateUrl: 'home/home.tpl.html',
                 controller: 'HomeCtrl as ctrl'
             })
-            .state('simple-promise', {
+            .state('simple-handling', {
                 url: '/simple',
                 templateUrl: 'simplePromise/simplePromise.tpl.html',
                 controller: 'SimplePromiseCtrl as ctrl'
