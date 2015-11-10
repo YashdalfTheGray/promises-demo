@@ -36,6 +36,11 @@ angular.module('promisesDemo',
                 url: '/chaining',
                 templateUrl: 'chaining/chaining.tpl.html',
                 controller: 'ChainingCtrl as ctrl'
+            })
+            .state('when', {
+                url: '/when',
+                templateUrl: 'wrappingAsync/wrappingAsync.tpl.html',
+                controller: 'WrappingAsyncCtrl as ctrl'
             });
             $urlRouterProvider.otherwise('/');
 
