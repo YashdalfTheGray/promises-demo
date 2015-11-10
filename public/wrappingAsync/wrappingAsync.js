@@ -9,7 +9,7 @@ angular.module('promisesDemo')
 
             var vm = this;
 
-            vm.timeoutInProgress = false;
+            vm.promiseInProgress = false;
 
             function asyncFunction() {
                 vm.promise = $timeout(function() {
@@ -23,9 +23,9 @@ angular.module('promisesDemo')
             }
 
             vm.immediateResolve = function() {
-                vm.timeoutInProgress = true;
+                vm.promiseInProgress = true;
                 $q.when(syncFunction()).then(function(result) {
-                    vm.timeoutInProgress = false;
+                    vm.promiseInProgress = false;
                     $mdToast.show(
                         $mdToast.simple()
                         .content(result)
@@ -36,9 +36,9 @@ angular.module('promisesDemo')
             };
 
             vm.delayedResolve = function() {
-                vm.timeoutInProgress = true;
+                vm.promiseInProgress = true;
                 $q.when(asyncFunction()).then(function(result) {
-                    vm.timeoutInProgress = false;
+                    vm.promiseInProgress = false;
                     $mdToast.show(
                         $mdToast.simple()
                         .content(result)
