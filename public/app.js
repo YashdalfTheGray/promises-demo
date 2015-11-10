@@ -46,6 +46,11 @@ angular.module('promisesDemo',
                 url: '/resolve-all',
                 templateUrl: 'multipleResolutions/multipleResolutions.tpl.html',
                 controller: 'MultipleResolutionsCtrl as ctrl'
+            })
+            .state('notify', {
+                url: '/notify',
+                templateUrl: 'notify/notify.tpl.html',
+                controller: 'NotifyCtrl as ctrl'
             });
             $urlRouterProvider.otherwise('/');
 
