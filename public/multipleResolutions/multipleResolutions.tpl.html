@@ -1,0 +1,37 @@
+<md-content layout-padding layout-wrap>
+    <h2 flex>Waiting for Multiple Resolutions</h2>
+
+    <md-content flex>
+        <md-input-container id="delay1-input-container" flex>
+            <label>Delay 1  (in seconds)</label>
+            <input type="text" ng-model="ctrl.delays[0]" id="delay1-input">
+        </md-input-container>
+        <md-input-container id="delay2-input-container" flex>
+            <label>Delay 2 (in seconds)</label>
+            <input type="number" ng-model="ctrl.delays[1]" id="delay2-input">
+        </md-input-container>
+        <md-input-container id="delay3-input-container" flex>
+            <label>Delay 3  (in seconds)</label>
+            <input type="text" ng-model="ctrl.delays[2]" id="delay3-input">
+        </md-input-container>
+        <md-input-container id="delay4-input-container" flex>
+            <label>Delay 4 (in seconds)</label>
+            <input type="number" ng-model="ctrl.delays[3]" id="delay4-input">
+        </md-input-container>
+        <p></p>
+        <md-button class="md-raised md-accent" ng-click="ctrl.setTimeout(ctrl.delays)" aria-label="Set Timeout" ng-disabled="ctrl.timeoutInProgress">
+            Set Timeout
+        </md-button>
+    </md-content>
+
+    <md-content flex>
+        <h3>Messages received</h3>
+        <p ng-show="ctrl.messages.length !== 0" ng-repeat="m in ctrl.messages track by $index">{{m}}</p>
+        <p ng-show="ctrl.messages.length === 0">No messages received yet.</p>
+    </md-content>
+
+    <md-content flex>
+        <p>Promises can be chained together by returning another promise from a <code>then()</code> block and handling the newly returned promise in the next <code>then()</code> block.</p>
+        <gist id="5a4230d2bc6736f995b1"></gist>
+    </md-content>
+</md-content>

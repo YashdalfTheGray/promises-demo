@@ -41,6 +41,11 @@ angular.module('promisesDemo',
                 url: '/when',
                 templateUrl: 'wrappingAsync/wrappingAsync.tpl.html',
                 controller: 'WrappingAsyncCtrl as ctrl'
+            })
+            .state('resolve-all', {
+                url: '/resolve-all',
+                templateUrl: 'multipleResolutions/multipleResolutions.tpl.html',
+                controller: 'MultipleResolutionsCtrl as ctrl'
             });
             $urlRouterProvider.otherwise('/');
 
