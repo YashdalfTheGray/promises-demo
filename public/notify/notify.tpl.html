@@ -1,3 +1,30 @@
 <md-content layout-padding layout-wrap>
     <h2 flex>Notify</h2>
+
+    <md-content flex>
+        <md-input-container id="message-input-container" flex>
+            <label>Message</label>
+            <input type="text" ng-model="ctrl.message" id="message-input">
+        </md-input-container>
+        <md-input-container id="delay-input-container" flex>
+            <label>Delay (in seconds)</label>
+            <input type="number" ng-model="ctrl.delay" id="delay-input">
+        </md-input-container>
+        <p></p>
+        <md-button class="md-raised md-accent" ng-click="ctrl.setTimeout(ctrl.message, ctrl.delay)" aria-label="Set Timeout" ng-disabled="ctrl.promiseInProgress">
+            Set Timeout
+        </md-button>
+    </md-content>
+
+    <md-content flex>
+        <h3>Message</h3>
+        <md-progress-circular md-mode="determinate" value="{{ctrl.progressValue * 10}}" ng-show="ctrl.promiseInProgress"></md-progress-circular>
+        <p>{{ctrl.returnMessage}}</p>
+    </md-content>
+
+    <md-content flex>
+        <p>The message toasted is returned as part of the promise being fulfilled. The simplest way of handling promises is to use <code>promise.then()</code>.</p>
+        <gist id="c5fd551f57642015f0e6"></gist>
+    </md-content>
+
 </md-content>
