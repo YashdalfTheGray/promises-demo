@@ -26,3 +26,7 @@
     cursor: pointer;
     cursor: hand;
 }
+
+.sentence {
+    padding-left: 4px;
+}
